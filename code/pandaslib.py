@@ -37,7 +37,7 @@ def get_file_extension(file_path : str) -> str:
     'countries.json' -> 'json'
 
     '''
-    file_extension = file_path.split(".")[1]
+    file_extension = file_path.split('.')[1]
     return file_extension
 
 def load_file(file_path: str, ext: str) -> pd.DataFrame:
@@ -54,7 +54,6 @@ def load_file(file_path: str, ext: str) -> pd.DataFrame:
         df = pd.read_excel(file_path)
     elif ext == "json":
         df = pd.read_json(file_path, orient = "records")
-    
     return df
 
 if __name__ == '__main__':
